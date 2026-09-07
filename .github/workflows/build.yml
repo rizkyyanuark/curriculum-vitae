@@ -45,6 +45,7 @@ jobs:
           mkdir -p github_deploy
           find github_artifacts -name "cv.pdf" -exec cp {} github_deploy/ \;
           cp index.html github_deploy/
+          if [ -f CNAME ]; then cp CNAME github_deploy/; fi
           touch github_deploy/.nojekyll
 
       - name: deploy on orphan branch
