@@ -1,0 +1,173 @@
+﻿\documentclass[a4paper,10pt]{article}
+
+\usepackage[top=0.6in, bottom=0.6in, left=0.65in, right=0.65in]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{parskip}
+
+% Configure Hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Curriculum Vitae - Rizky Yanuar Kristianto},
+    pdfpagemode=FullScreen,
+}
+
+% Page number suppression
+\pagestyle{empty}
+
+% Section format with horizontal rule
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	HEADER / CONTACT
+%----------------------------------------------------------------------------------------
+\begin{center}
+    {\Huge \textbf{Rizky Yanuar Kristianto}} \\ \vspace{2pt}
+    Surabaya, Jawa Timur, Indonesia \\ \vspace{1pt}
+    Phone: \href{tel:+6289676257683}{+6289676257683} \ $|$ \ 
+    E-mail: \href{mailto:rizkyyanuarkristianto@gmail.com}{rizkyyanuarkristianto@gmail.com} \\ \vspace{1pt}
+    \href{https://www.linkedin.com/in/rizkyyanuark}{www.linkedin.com/in/rizkyyanuark} \ $|$ \ 
+    \href{https://github.com/rizkyyanuark}{https://github.com/rizkyyanuark}
+\end{center}
+
+\vspace{2pt}
+\noindent
+AI-oriented Data Engineer with hands-on experience bridging scalable data engineering pipelines with production AI/ML systems. Proven track record across enterprise environments in architecting end-to-end AI workflows, building robust data pipelines, and deploying containerized AI microservices on cloud infrastructure. Adept at translating complex data requirements into coherent, high-reliability AI solutions.
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section*{EDUCATION}
+\noindent
+\textbf{STATE UNIVERSITY OF SURABAYA} \hfill Surabaya, East Java \\
+\textit{Bachelor of Data Science} \hfill Aug 2022 -- July 2026 \\
+\textbf{GPA: 3.59/4.00 (145 Credits)} \\
+\textbf{Relevant Coursework:} Data Science, Data Structure and Algorithms, Statistics, Artificial Intelligence, Machine Learning, Computer Vision, Generative AI.
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCES
+%----------------------------------------------------------------------------------------
+\section*{WORK EXPERIENCES}
+
+\noindent
+\textbf{State University of Surabaya} \hfill Surabaya, East Java \\
+\textit{Research Assistant} \hfill Mar 2026 -- Present
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Co-authored research on generative deep learning architectures, formulating hyperparameter tuning strategies and performing ablation studies against baseline models to achieve optimal convergence and evaluation metrics for an IEEE-compliant research manuscript.
+    \item Managed and operated computational cloud on AWS (EC2, S3) and on-premise Linux GPU servers, configuring Dockerized environments and resource scheduling to maintain \textbf{99.5\%} compute uptime for deep learning training.
+    \item Standardized dataset lifecycle management and collaborative MLOps pipelines for automating model versioning, dataset artifact retention, and validation protocols across 5+ researchers.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Kominfo Jatim} \hfill Surabaya, East Java \\
+\textit{AI Engineer Intern} \hfill Jul 2025 -- Des 2025
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Architected domain-specific vector data models and automated ingestion pipelines, converting unstructured public complaint records into structured semantic embeddings to optimize downstream RAG retrieval.
+    \item Designed, trained, and evaluated an NLP model for Hoax News detection, accelerating the citizen report verification process within the Majadigi ecosystem.
+    \item Managed version control and CI/CD pipelines with GitLab, deploying the system to a VPS and documenting APIs using Postman Collection for frontend integration.
+    \item Contributed to the East Java Governor's digital transformation roadmap by successfully deploying production-ready AI features accessed by thousands of citizens.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{PT PLN Icon Plus} \hfill Surabaya, East Java \\
+\textit{Data Engineer Intern} \hfill Mar 2025 -- Jun 2025
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Orchestrated end-to-end data lifecycle pipelines using Apache Airflow, PySpark, and Python, automating ingestion, transformation, and staging for \textbf{240,000+ daily operational records}.
+    \item Architected scalable relational and dimensional data models across 4 disparate enterprise sources (\textbf{15+ tables}), establishing optimized schema relationships, primary/foreign key integrity, and indexed structures for analytical and AI consumption.
+    \item Enforced rigorous data quality assurance and schema validation protocols, eliminating data discrepancies while optimizing backend retrieval through eager loading and structured SQL to cut reporting latency by \textbf{over 30\%}.
+    \item Developed and deployed an enterprise LLM AI Agent integrated with internal APIs and structured data models, enabling automated semantic reasoning over telecom network coverage for 35+ operations staff.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{Bangkit led by Google, GoTo, \& Traveloka} \hfill Remote \\
+\textit{ML Engineer} \hfill Aug 2024 -- Dec 2024
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Led a cross-functional capstone team of 7 engineers (Cloud, Mobile, ML) to develop an end-to-end AI mobile application, delivering the project 1 week ahead of schedule.
+    \item Engineered an end-to-end data pipeline to collect, clean, validate, and annotate \textbf{6,500+ raw image files}, enforcing automated data quality checks and transformation scripts to curate balanced training datasets.
+    \item Containerized and deployed the trained model as a low-latency Flask REST API on Google Cloud Platform (GCP) for real-time mobile inference.
+    \item Awarded \textbf{Best Presenting Group out of 30+ project teams} for technical excellence, architecture clarity, and business impact.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	ORGANIZATIONAL EXPERIENCES
+%----------------------------------------------------------------------------------------
+\section*{ORGANIZATIONAL EXPERIENCES}
+
+\noindent
+\textbf{Himpunan Mahasiswa Sains Data} \hfill Surabaya, East Java \\
+\textit{Staff of Advocacy and Student Welfare Division} \hfill Jan 2024 -- Jan 2025
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Organized and executed 10+ programs, including webinars, seminars, competitions, and community outreach over one term.
+    \item Initiated the Innovative Strategies and Career Pathways Workshop (InSCAW) as a core advocacy program, engaging \textbf{50+ students} and professionals in career development.
+    \item Facilitated communication channels between students and faculty to coordinate support programs effectively.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	PROJECTS
+%----------------------------------------------------------------------------------------
+\section*{PROJECTS}
+
+\noindent
+\textbf{Hybrid Graph-RAG Academic Knowledge Base (Yunesa)} \hfill Aug 2025 -- Jul 2026
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Architected a Hybrid Graph-RAG platform combining Neo4j (Knowledge Graph) and Milvus (Vector DB) for multi-hop semantic querying over \textbf{10,000+ academic papers and profiles}.
+    \item Orchestrated automated Apache Airflow ETL pipelines and polyglot persistence (PostgreSQL, Redis, MinIO), achieving sub-second API latency via FastAPI \& Docker on AWS EC2.
+\end{itemize}
+
+\vspace{4pt}
+\noindent
+\textbf{End-to-End Sentiment Analysis Pipeline for KIP-K Tweets} \hfill June 2024
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Automated ingestion of 4,000+ social media discussions, building a cleaning and tokenization pipeline in Python.
+    \item Trained and optimized a Bidirectional LSTM (BiLSTM) neural network achieving \textbf{88\% classification accuracy}, effectively categorizing multi-class student sentiment and public perception trends.
+    \item Integrated model inference outputs into automated data pipelines and interactive Looker Studio dashboards covering 50+ universities, providing actionable data insights for national scholarship outreach strategy.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section*{SKILLS}
+
+\noindent
+\textbf{Technical Skills:}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Programming:} Python, SQL, Bash
+    \item \textbf{Data Engineering:} Apache Airflow, PySpark, Pandas, NumPy, ETL/ELT Pipeline Design, Data Modeling, Data Lifecycle Management, Data Quality Assurance
+    \item \textbf{Databases:} PostgreSQL, BigQuery, Neo4j, Milvus (Vector DB), Redis
+    \item \textbf{AI \& ML:} Machine Learning, Deep Learning, Large Language Models (LLMs), RAG / GraphRAG, NLP, Computer Vision, Model Deployment (FastAPI, Flask)
+    \item \textbf{Cloud \& DevOps:} AWS, GCP, Docker, Docker Compose, Git (GitHub, GitLab), CI/CD (GitLab CI, GitHub Actions), MLFlow
+    \item \textbf{Soft Skills:} Analytical Problem Solving, Adaptability, Cross-Functional Collaboration
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{Certifications \& Training:}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item TensorFlow Developer Certificate \& DeepLearning.AI Specializations
+    \item AWS Certified CloudOps Engineer
+    \item Google Cloud JuaraGCP
+    \item Dicoding Data Analysis with Python
+    \item EnglishScore / IELTS (Band 7.0 -- C1 Equivalent)
+\end{itemize}
+
+\vspace{2pt}
+\noindent
+\textbf{Languages:}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Fluent:} Bahasa Indonesia, English (IELTS: 7)
+    \item \textbf{Conversational:} Javanese
+\end{itemize}
+
+\end{document}
