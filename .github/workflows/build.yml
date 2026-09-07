@@ -18,6 +18,7 @@ jobs:
         uses: dante-ev/latex-action@latest
         with:
           root_file: cv
+          compiler: xelatex
           working_directory: .
 
       - name: move
