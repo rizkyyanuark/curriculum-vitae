@@ -1,51 +1,53 @@
-name: Build and Deploy CV
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+name: build
+on: [push]
+
 permissions:
   contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    egv:
+    env:
+      DIR: .
       FILE: cv
     steps:
-      - name: Checkout Repository
+      - name: Set up Git repository
         uses: actions/checkout@v4
-      - name: Compile LaTeX to PDF
+
+      - name: cv
         uses: dante-ev/latex-action@latest
         with:
           root_file: cv
           working_directory: .
-      - name: Prepare Artifacts
-        run: |
-          mkdir -p github_artifacts
-          mv cv.pdf github_artifacts/
-      - name: Upload PDF Artifact
-        uses: actions/upload-artifact@4
+
+      - name: move
+        run: mkdir -p github_artifacts && mv cv.pdf ./github_artifacts/
+
+      - name: Upload pdf as artifact
+        uses: actions/upload-artifact@v4
         with:
-          name: cv-pdf
-          path: github_artifacts/
+          name: cv.pdf
+          path: ./github_artifacts
+
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Download PDF Artifact
-        uses: actions/download-artifact@v4
+
+      - uses: actions/download-artifact@v4
         with:
-          name: cv-pdf
           path: github_artifacts
-      - name: Prepare Deployment Directory
+
+      - name: move
         run: |
           mkdir -p github_deploy
-          mv github_artifacts/cv.pdf github_deploy/
+          find github_artifacts -name "cv.pdf" -exec cp {} github_deploy/ \;
           cp index.html github_deploy/
           touch github_deploy/.nojekyll
-      - name: Deploy to GitHub Pages (build branch)
+
+      - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
