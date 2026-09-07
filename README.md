@@ -18,7 +18,7 @@ You can get a direct link to the generated PDF which you can use on your website
 
 For this, after editing your copy of `cv.tex` and pushing changes to your repo, under Settings -> Pages set your Github Pages source to the `build` directory
 
-![](https://i.imgur.com/lwATw1o.png)
+![](https://i.imgur.com/Zj3K9na.jpeg)
 
 ## This template on Overleaf
 
