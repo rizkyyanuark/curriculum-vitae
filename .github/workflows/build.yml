@@ -1,5 +1,11 @@
 name: build
-on: [push]
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
 
 permissions:
   contents: write
@@ -7,24 +13,21 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DIR: .
-      FILE: cv
     steps:
-      - name: Set up Git repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: cv
+      - name: Compile CV (XeLaTeX)
         uses: dante-ev/latex-action@latest
         with:
           root_file: cv
           compiler: xelatex
           working_directory: .
 
-      - name: move
+      - name: Prepare Artifact
         run: mkdir -p github_artifacts && mv cv.pdf ./github_artifacts/
 
-      - name: Upload pdf as artifact
+      - name: Upload PDF Artifact
         uses: actions/upload-artifact@v4
         with:
           name: cv.pdf
@@ -37,11 +40,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - uses: actions/download-artifact@v4
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
         with:
+          name: cv.pdf
           path: github_artifacts
 
-      - name: move
+      - name: Prepare Deploy Directory
         run: |
           mkdir -p github_deploy
           find github_artifacts -name "cv.pdf" -exec cp {} github_deploy/ \;
@@ -49,7 +54,7 @@ jobs:
           if [ -f CNAME ]; then cp CNAME github_deploy/; fi
           touch github_deploy/.nojekyll
 
-      - name: deploy on orphan branch
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -57,3 +62,23 @@ jobs:
           publish_branch: build
           force_orphan: true
           enable_jekyll: false
+
+  release:
+    needs: [build]
+    if: startsWith(github.ref, 'refs/tags/')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: cv.pdf
+          path: ./
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: cv.pdf
+          generate_release_notes: true

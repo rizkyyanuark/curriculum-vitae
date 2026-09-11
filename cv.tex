@@ -1,11 +1,13 @@
 \documentclass[a4paper,10pt]{article}
 
-\usepackage[a4paper, top=1.20cm, bottom=1.59cm, left=1.50cm, right=1.50cm]{geometry}
+\usepackage[a4paper, top=1.15cm, bottom=1.15cm, left=1.35cm, right=1.35cm]{geometry}
 \usepackage{fontspec}
 \usepackage{enumitem}
-\usepackage[colorlinks=true, urlcolor=blue, linkcolor=blue]{hyperref}
+\usepackage{xcolor}
+\usepackage[colorlinks=true, urlcolor=navyblue, linkcolor=navyblue]{hyperref}
 
-% Configure Microsoft Verdana fonts
+\definecolor{navyblue}{RGB}{15, 62, 130}
+
 \setmainfont{verdana.ttf}[
     Path = ./fonts/,
     BoldFont = verdanab.ttf,
@@ -17,170 +19,140 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
-% Itemize list configuration
 \setlist[itemize]{
-    leftmargin=14pt,
+    leftmargin=13pt,
     label=\textbullet,
     itemsep=1pt,
     parsep=0pt,
-    topsep=2pt,
+    topsep=1.5pt,
     partopsep=0pt
+}
+
+\newcommand{\cvsection}[1]{%
+    \vspace{5pt}%
+    {\fontsize{10.5pt}{12pt}\selectfont \textbf{#1}}\\[-4pt]%
+    \rule{\textwidth}{0.5pt}%
+    \vspace{2.5pt}%
 }
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	HEADER / CONTACT INFO
-%----------------------------------------------------------------------------------------
 \begin{center}
-    {\fontsize{15pt}{18pt}\selectfont \textbf{Rizky Yanuar Kristianto}} \\[4pt]
-    Surabaya, Jawa Timur, Indonesia \\
-    Phone: \href{tel:+6289676257683}{+6289676257683} \\
-    E-mail: \href{mailto:rizkyyanuarkristianto@gmail.com}{rizkyyanuarkristianto@gmail.com} \\
-    \href{https://www.linkedin.com/in/rizkyyanuark}{www.linkedin.com/in/rizkyyanuark} \\
-    \href{https://github.com/rizkyyanuark}{https://github.com/rizkyyanuark}
+    {\fontsize{15.5pt}{18pt}\selectfont \textbf{Rizky Yanuar Kristianto}} \\[3pt]
+    Surabaya, East Java, Indonesia \\
+    Phone: \href{tel:+6289676257683}{+6289676257683} \;\textbar\;
+    Email: \href{mailto:rizkyyanuarkristianto@gmail.com}{rizkyyanuarkristianto@gmail.com} \\[2pt]
+    \href{https://www.linkedin.com/in/rizkyyanuark}{linkedin.com/in/rizkyyanuark} \;\textbar\;
+    \href{https://github.com/rizkyyanuark}{github.com/rizkyyanuark}
 \end{center}
 
-\vspace{8pt}
-AI-oriented Data Engineer with hands-on experience bridging scalable data engineering pipelines with production AI/ML systems. Proven track record across enterprise environments in architecting end-to-end AI workflows, building robust data pipelines, and deploying containerized AI microservices on cloud infrastructure. Adept at translating complex data requirements into coherent, high-reliability AI solutions.
+\vspace{3pt}
+Data Science student with hands-on experience in data engineering and applied machine learning. Experienced in building automated ETL pipelines with Apache Airflow and PySpark, working with vector databases for RAG workflows, and deploying containerized applications on AWS and GCP. Focused on building clean data pipelines that support reliable machine learning models.
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\vspace{10pt}
-\textbf{EDUCATION}
+\cvsection{EDUCATION}
 
-\vspace{4pt}
 \textbf{STATE UNIVERSITY OF SURABAYA} \hfill Surabaya, East Java \\
-\textbf{Bachelor of Data Science} \hfill Aug 2022 – July 2026 \\
-\textbf{GPA:} 3.59/4.00 (145 Credits) \\
-Relevant Coursework: Data Science, Data Structure and Algorithms, Statistics, Data Modelling, Machine Learning, Computer Vision, Generative AI.
+\textbf{Bachelor of Data Science} \hfill Aug 2022 -- Jul 2026 \\
+\textbf{GPA:} 3.59/4.00 (145 Credits completed) \\
+Relevant Coursework: Data Science, Data Structures and Algorithms, Statistics, Data Modeling, Machine Learning, Computer Vision, Generative AI.
 
-%----------------------------------------------------------------------------------------
-%	WORK EXPERIENCES
-%----------------------------------------------------------------------------------------
-\vspace{10pt}
-\textbf{WORK EXPERIENCES}
+\cvsection{WORK EXPERIENCE}
+
+\textbf{State University of Surabaya} \hfill Surabaya, East Java \\
+Research Assistant \hfill Jan 2026 -- Present
+\begin{itemize}
+    \item Co-authored a research paper currently under peer review in a Scopus Q1 journal, focusing on generative model architectures and knowledge graphs.
+    \item Ran hyperparameter tuning and ablation experiments to evaluate architectural improvements against baseline models for an IEEE-format manuscript.
+    \item Set up Docker environments on AWS GPU instances to run data extraction, ontology mapping, and embedding generation workflows.
+    \item Tracked datasets and model checkpoints using Git and DVC to keep experimental results organized and reproducible.
+\end{itemize}
 
 \vspace{4pt}
-\textbf{State University of Surabaya} \hfill Surabaya, East Java \\
-Research Assistant \hfill Jan 2026 – Present
-\begin{itemize}
-    \item Co-authored research on generative model architectures, formulating hyperparameter tuning strategies and performing ablation studies against baseline models to novel generative model improvements for an IEEE-compliant research manuscript
-    \item Co-authored research with Phd advisor and in review on journal \textbf{Scopus Q1}
-    \item Configured Dockerized GPU compute environments on AWS, orchestrating reproducible data extraction, ontology mapping, and embedding generation pipelines
-    \item Established MLOps pipelines for model and dataset versioning to ensure research reproducibility
-\end{itemize}
-
-\vspace{6pt}
 \textbf{Kominfo Jatim} \hfill Surabaya, East Java \\
-AI Engineer Intern \hfill Jul 2025 –Des 2025
+AI Engineer Intern \hfill Jul 2025 -- Dec 2025
 \begin{itemize}
-    \item Built an AI-powered conversational chatbot on Majadigi using AWS Bedrock and Qdrant Vector DB, transforming regional regulatory documents into real-time public service assistance for citizens
-    \item Designed, trained, and evaluated an NLP model for hoax news detection, accelerating the citizen report verification process within the internal Majadigi ecosystem
-    \item Managed version control and CI/CD pipelines with GitLab, deploying the system to a VPS and documenting APIs using Postman Collection for frontend integration
-    \item Contributed to the East Java Governor’s digital transformation roadmap by successfully deploying production-ready AI features accessed by thousands of users
+    \item Built a RAG-based question-answering bot for the Majadigi portal using AWS Bedrock and Qdrant, helping citizens search regional regulations easily.
+    \item Trained an NLP classification model for hoax news detection, helping the internal team review citizen incident reports more quickly.
+    \item Set up GitLab CI/CD pipelines to run automated tests and deploy code to a Linux VPS, and documented REST APIs in Postman for the frontend team.
+    \item Assisted in deploying the AI features to production on Majadigi, serving live citizen inquiries.
 \end{itemize}
 
-\vspace{6pt}
+\vspace{4pt}
 \textbf{PT PLN Icon Plus} \hfill Surabaya, East Java \\
-Data Engineer Intern \hfill Feb 2025 –Jun 2025
+Data Engineer Intern \hfill Feb 2025 -- Jun 2025
 \begin{itemize}
-    \item Engineered automated ETL pipelines using Apache Airflow, PySpark, and Python to extract, transform, and load ICONNET telecom operational and asset data (\textbf{240,000+ daily records}) into a centralized data warehouse, reducing manual data processing by 50\%
-    \item Created an error notification system that integrate with Slack and Airflow, enhancing realtime error detection and response capabilities
-    \item Benchmarked network signal quality metrics across major telecom providers, building interactive analytics dashboards to deliver actionable performance insights for operational decision-making
-    \item Developed an LLM AI Agent integrated with database APIs, automating telecom network insight based evidence retrieval to answer users question for \textbf{15+} operations staff
+    \item Built automated ETL pipelines using Apache Airflow, PySpark, and Python to process 240,000+ daily ICONNET telecom records, reducing manual reporting time by 50\%.
+    \item Created a Slack alert notification linked to Airflow DAGs, enabling the team to detect and resolve pipeline errors quickly.
+    \item Analyzed telecom signal quality data across providers and built interactive Looker Studio dashboards for weekly operational monitoring.
+    \item Built a database question-answering tool using an LLM and SQL queries, helping 15+ staff look up network records without writing manual SQL.
 \end{itemize}
 
-\vspace{6pt}
-\textbf{Bangkit led by Google, GoTo, \& Traveloka} \hfill Remote \\
-ML Engineer \hfill Aug 2024 – Dec 2024
+\vspace{4pt}
+\textbf{Bangkit Academy led by Google, GoTo, and Traveloka} \hfill Remote \\
+Machine Learning Cohort \hfill Aug 2024 -- Dec 2024
 \begin{itemize}
-    \item Led a cross-functional capstone team of 7 engineers (ML, Cloud, Mobile) to build NV-Bite, an AI-powered nutrition and food recognition mobile app, completing full end-to-end integration \textbf{1 week ahead of schedule}
+    \item Led a 7-member capstone team (ML, Cloud, Mobile) to develop NV-Bite, a nutrition tracking mobile app, completing full project delivery 1 week ahead of deadline.
+    \item Collected, cleaned, and labeled a dataset of 6,500+ food images for multi-class classification model training.
+    \item Trained a Computer Vision classification model and deployed it using Flask on Google Cloud Platform (GCP) to serve predictions for the mobile app.
+    \item Awarded Best Presenting Group out of 30+ capstone teams for technical delivery and clear project demonstration.
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	PAGE 2
-%----------------------------------------------------------------------------------------
 \newpage
 
-\begin{itemize}
-    \item Architected an automated data pipeline to clean and label 6,500+ multi-class food images for Computer Vision model training and evaluation
-    \item Trained a fine-tuned Computer Vision classification model and deployed it as a low-latency Flask REST API on Google Cloud Platform (GCP), enabling seamless real-time inference for Android mobile clients
-    \item Awarded \textbf{Best Presenting Group} out of 30+ project teams for technical excellence, architecture clarity, and business impact
-\end{itemize}
+\cvsection{TECHNICAL PROJECTS}
 
-%----------------------------------------------------------------------------------------
-%	ORGANIZATIONAL EXPERIENCES
-%----------------------------------------------------------------------------------------
-\vspace{10pt}
-\textbf{ORGANIZATIONAL EXPERIENCES}
+\textbf{Hybrid Graph-RAG Academic Knowledge Base (Thesis)} \hfill Aug 2025 -- Jul 2026
+\begin{itemize}
+    \item Built a Hybrid Graph-RAG system combining Neo4j and Milvus to search and connect 10,000+ academic papers and author profiles using both semantic similarity and graph links.
+    \item Wrote Apache Airflow DAGs to extract, clean, and load publication data from online academic sources into Neo4j and PostgreSQL.
+    \item Co-authored a research methodology paper currently under peer review in a Scopus Q1 journal, documenting graph retrieval benchmarks and entity resolution methods.
+    \item Structured data storage using PostgreSQL for metadata, Neo4j for graphs, Milvus for embeddings, and Redis for caching, keeping API response times under 1 second.
+\end{itemize}
 
 \vspace{4pt}
-\textbf{Himpunan Mahasiswa Sains Data} \hfill Surabaya, East Java \\
-Staff of Advocacy and Student Welfare Division \hfill Jan 2024 – Jan 2025
+\textbf{End-to-End Sentiment Analysis Pipeline for KIP-K Scholarship Tweets} \hfill Jun 2024
 \begin{itemize}
-    \item Organized and executed \textbf{10+} programs, including webinars, seminars, competitions, and community over one term
-    \item Initiated the Innovative Strategies and Career Pathways Workshop (InSCAW) as a core advocacy program, engaging \textbf{50+} students and professionals in career development
-    \item Facilitated communication channels between students and faculty to coordinate support programs effectively
+    \item Built a Python script and text preprocessing pipeline to collect and clean 4,000+ raw tweets from X.
+    \item Trained and evaluated a BiLSTM model using GloVe word embeddings to classify public sentiment into positive, neutral, and negative categories.
+    \item Visualized sentiment patterns across 50+ universities in a Looker Studio dashboard to help analyze public feedback on scholarship policies.
 \end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	PROJECTS
-%----------------------------------------------------------------------------------------
-\vspace{10pt}
-\textbf{PROJECTS}
+\cvsection{ORGANIZATIONAL EXPERIENCE}
 
-\vspace{4pt}
-\textbf{Hybrid Graph-RAG Academic Knowledge Base (Thesis)} \hfill Aug 2025 – Jul 2026
+\textbf{Himpunan Mahasiswa Sains Data (UNESA)} \hfill Surabaya, East Java \\
+Staff of Advocacy and Student Welfare Division \hfill Jan 2024 -- Jan 2025
 \begin{itemize}
-    \item Built a Hybrid Graph-RAG platform combining Neo4j \& Milvus for multi-hop reasoning and semantic-based retrieval over 10,000+ academic papers and researcher profiles
-    \item Orchestrated automated Apache Airflow ETL pipelines to collection data varity of sources and transformed data into knowledge graph
-    \item Co-authored research methodology currently under peer-review in a Scopus Q1 journal, formalizing the graph retrieval benchmarking and hybrid entity-resolution algorithms
+    \item Planned and executed 10+ student events, including data science webinars, workshops, and competitions over a one-year tenure.
+    \item Initiated the InSCAW career workshop series, coordinating with industry speakers and engaging 50+ student participants.
+    \item Served as a liaison between students and faculty department heads to address academic concerns and welfare requests.
 \end{itemize}
 
-\vspace{6pt}
-\textbf{End-to-End Sentiment Analysis Pipeline for KIP-K Tweets} \hfill June 2024
-\begin{itemize}
-    \item Engineered an automated data collection and NLP preprocessing pipeline in Python to scrape and clean 4,000+ raw tweets from X
-    \item Benchmarked multiple recurrent neural architectures to build an optimized BiLSTM + GloVe model, outperforming baseline models in multi-class sentiment classification
-    \item Integrated model inference outputs into automated data pipelines and interactive Looker Studio dashboards, mapping sentiment distribution and public discourse trends across 50+ universities to evaluate scholarship policy reception
-\end{itemize}
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\vspace{10pt}
-\textbf{SKILLS}
-\vspace{2pt}
-\hrule height 0.5pt
-\vspace{4pt}
+\cvsection{SKILLS}
 
 \textbf{Technical Skills:}
 \begin{itemize}
     \item \textbf{Programming:} Python, SQL, Bash
-    \item \textbf{Data Engineering:} Apache Airflow, PySpark, ETL/ELT Pipeline Design, Data Modeling, Data Lifecycle Management
-    \item \textbf{Databases:} PostgreSQL, BigQuery, Neo4j, Milvus, Redis
-    \item \textbf{AI \& ML:} Machine Learning, Deep Learning (Tensorflow, PyTorch), Large Language Models (LLMs), RAG / GraphRAG, NLP, Model Deployment (FastAPI, MLFlow)
-    \item \textbf{Cloud \& DevOps:} AWS, GCP, Docker Compose, Git (GitHub, GitLab), CI/CD (GitLab CI, GitHub Actions), Terraform
-    \item \textbf{Soft Skills:} Analytical Problem Solving, Adaptability, Cross-Functional Collaboration
+    \item \textbf{Data Engineering:} Apache Airflow, PySpark, ETL Pipeline Design, Data Modeling, Kafka
+    \item \textbf{Databases \& Storage:} PostgreSQL, BigQuery, Neo4j, Milvus, Redis, MinIO
+    \item \textbf{AI \& Machine Learning:} LLMs, RAG / GraphRAG, Computer Vision, NLP, PyTorch, TensorFlow, MLflow
+    \item \textbf{Cloud \& DevOps:} AWS, Google Cloud Platform (GCP), Docker, Linux, Git, CI/CD (GitLab CI, GitHub Actions)
+    \item \textbf{Soft Skills:} Problem Solving, Cross-Functional Collaboration, Technical Communication
 \end{itemize}
 
-\vspace{4pt}
+\vspace{3pt}
 \textbf{Certifications \& Training:}
 \begin{itemize}
-    \item TensorFlow Developer Certificate \& DeepLearning.AI Specializations
-    \item Google Cloud Skills Boost: Machine Learning Specialization
-    \item AWS Certified CloudOps Engineer
-    \item Dicoding Data Analysis with Python
-    \item EnglishScore / IELTS (Band 7.0 - C1 Equivalent)
+    \item DeepLearning.AI TensorFlow Developer \& Generative AI Specializations
+    \item Google Cloud Skills Boost: Machine Learning Specialization (JuaraGCP)
+    \item AWS Certified CloudOps / Cloud Computing Training
+    \item Dicoding: Data Analysis with Python
+    \item EnglishScore / IELTS Equivalent (Band 7.0 -- C1 Equivalent)
 \end{itemize}
 
-\vspace{4pt}
+\vspace{3pt}
 \textbf{Languages:}
 \begin{itemize}
-    \item Fluent: Bahasa Indonesia, English (\textbf{IELTS: 7})
-    \item Conversational: Javanese
+    \item Indonesian (Native), English (Fluent, IELTS: 7.0), Javanese (Conversational)
 \end{itemize}
 
 \end{document}
