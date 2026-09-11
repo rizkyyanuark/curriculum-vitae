@@ -58,15 +58,15 @@ Nilai pada baris `- **Recommended Apply:**` **HANYA BOLEH** dipilih dari 5 posis
 
 ---
 
-## 3. Standar Layout & Aksesibilitas
+## 3. Standar Layout & Web Entry
 
 1. **Format Dokumen LaTeX (`cv.tex`):**
    * Ditargetkan untuk **2 halaman seimbang** tanpa ada entri pekerjaan yang terbelah canggung di tengah jalan.
    * Halaman 1 memuat: Header, Summary, Education, dan seluruh Work Experience.
    * Halaman 2 memuat: Technical Projects, Organizational Experience, Technical Skills, Certifications, dan Languages.
-2. **Web CV (`index.html`):**
-   * Memenuhi standar aksesibilitas WCAG AA (rasio kontras teks > 4.5:1 untuk teks normal, > 3.0:1 untuk teks besar dan kontrol interaktif).
-   * Mendukung navigasi keyboard (`:focus-visible`), zoom 200% tanpa teks terpotong, dan mode gelap/terang.
+2. **Web Entry (`index.html`):**
+   * Berfungsi sebagai **instant direct redirect / PDF viewer** ke `./cv.pdf` (`<meta http-equiv="refresh" content="0; url=./cv.pdf">` dan `window.location.replace("./cv.pdf");`).
+   * Saat URL `https://rizkyyanuark.github.io/curriculum-vitae/` dibuka, peramban secara instan langsung menampilkan file PDF di viewer bawaan browser, tanpa halaman perantara desain HTML panjang.
 
 ---
 

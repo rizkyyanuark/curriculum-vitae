@@ -3,489 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rizky Yanuar Kristianto | AI Data Engineer</title>
-    <meta name="description" content="Curriculum Vitae of Rizky Yanuar Kristianto. Data Science student with hands-on experience in data engineering, ETL pipelines, vector databases, and applied machine learning.">
-    
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Rizky Yanuar Kristianto | AI Data Engineer">
-    <meta property="og:description" content="Data Science student with hands-on experience in data engineering and applied machine learning. View or download CV.">
+    <title>Curriculum Vitae - Rizky Yanuar Kristianto</title>
+
+    <!-- Instant HTML meta redirect to cv.pdf -->
+    <meta http-equiv="refresh" content="0; url=./cv.pdf">
+
+    <!-- Open Graph & Social Media Preview Cards -->
+    <meta property="og:title" content="Rizky Yanuar Kristianto - Curriculum Vitae">
+    <meta property="og:description" content="Data Science & AI Data Engineer | Universitas Negeri Surabaya | View and Download Latest Resume (PDF)">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://rizkyyanuark.github.io/curriculum-vitae/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rizky Yanuar Kristianto - Curriculum Vitae">
+    <meta name="twitter:description" content="Data Science & AI Data Engineer | Universitas Negeri Surabaya | View and Download Latest Resume (PDF)">
+
+    <!-- Instant JavaScript Redirect -->
+    <script>
+        window.location.replace("./cv.pdf");
+    </script>
 
     <style>
-        :root {
-            --bg-page: #f8fafc;
-            --bg-card: #ffffff;
-            --text-primary: #0f172a;
-            --text-secondary: #334155;
-            --text-muted: #475569;
-            --border-color: #cbd5e1;
-            --link-color: #1d4ed8;
-            --link-hover: #0f3e82;
-            --primary-action: #0f172a;
-            --primary-action-hover: #1e293b;
-            --primary-action-text: #ffffff;
-            --focus-ring: #0284c7;
-            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg-page: #090d16;
-                --bg-card: #111827;
-                --text-primary: #f8fafc;
-                --text-secondary: #cbd5e1;
-                --text-muted: #94a3b8;
-                --border-color: #334155;
-                --link-color: #60a5fa;
-                --link-hover: #93c5fd;
-                --primary-action: #2563eb;
-                --primary-action-hover: #1d4ed8;
-                --primary-action-text: #ffffff;
-                --focus-ring: #38bdf8;
-            }
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
-            font-family: var(--font-stack);
-            background-color: var(--bg-page);
-            color: var(--text-secondary);
-            line-height: 1.55;
-            padding: 24px 16px 48px;
-            text-rendering: optimizeLegibility;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: underline;
-            text-underline-offset: 3px;
-        }
-
-        a:hover, a:focus {
-            color: var(--link-hover);
-        }
-
-        :focus-visible {
-            outline: 2px solid var(--focus-ring);
-            outline-offset: 3px;
-        }
-
-        .container {
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .action-bar {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 20px;
-            padding: 12px 16px;
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            justify-content: center;
+            padding: 20px;
         }
-
-        .action-links {
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 36px 32px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+        }
+        .avatar-container {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f6feb, #238636);
             display: flex;
-            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            border: 3px solid #30363d;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #58a6ff;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .status {
+            font-size: 13px;
+            color: #8b949e;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .loader-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #21262d;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+        .loader-progress {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #1f6feb, #2ea043);
+            animation: indeterminate 1.5s infinite linear;
+            transform-origin: 0% 50%;
+        }
+        @keyframes indeterminate {
+            0% { transform: translateX(0) scaleX(0); }
+            40% { transform: translateX(0) scaleX(0.5); }
+            100% { transform: translateX(100%) scaleX(0.5); }
+        }
+        .actions {
+            display: flex;
+            flex-direction: column;
             gap: 10px;
         }
-
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 6px;
-            padding: 8px 16px;
-            font-size: 14px;
-            font-weight: 600;
-            border-radius: 6px;
-            text-decoration: none;
-            transition: background-color 0.15s ease, border-color 0.15s ease;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background-color: var(--primary-action);
-            color: var(--primary-action-text);
-            border: 1px solid var(--primary-action);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--primary-action-hover);
-            color: var(--primary-action-text);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--text-muted);
-        }
-
-        .cv-sheet {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 40px 48px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
-
-        @media (max-width: 640px) {
-            .cv-sheet {
-                padding: 24px 20px;
-            }
-        }
-
-        header.cv-header {
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 18px;
-            margin-bottom: 20px;
-        }
-
-        h1.candidate-name {
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.02em;
-            margin-bottom: 4px;
-        }
-
-        .candidate-role {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-secondary);
-        }
-
-        .contact-info {
-            font-size: 14px;
-            color: var(--text-muted);
-            display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 8px;
-            margin-top: 6px;
-        }
-
-        .separator {
-            user-select: none;
-            color: var(--text-muted);
-        }
-
-        .summary-text {
-            font-size: 15px;
-            color: var(--text-secondary);
-            margin-bottom: 24px;
-            line-height: 1.6;
-        }
-
-        section.cv-section {
-            margin-bottom: 24px;
-        }
-
-        h2.section-title {
+            padding: 10px 18px;
             font-size: 14px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-primary);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 4px;
-            margin-bottom: 14px;
-        }
-
-        .entry-item {
-            margin-bottom: 16px;
-        }
-
-        .entry-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .entry-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 4px;
-            margin-bottom: 2px;
-        }
-
-        .entry-title {
-            font-weight: 700;
-            color: var(--text-primary);
-            font-size: 15px;
-        }
-
-        .entry-subtitle {
             font-weight: 600;
-            color: var(--text-secondary);
-            font-size: 14px;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
         }
-
-        .entry-meta {
-            font-size: 13px;
-            color: var(--text-muted);
-            white-space: nowrap;
+        .btn-primary {
+            background-color: #238636;
+            color: #ffffff;
         }
-
-        ul.bullet-list {
-            list-style-type: disc;
-            padding-left: 20px;
-            margin-top: 6px;
+        .btn-primary:hover {
+            background-color: #2ea043;
         }
-
-        ul.bullet-list li {
-            font-size: 14px;
-            margin-bottom: 5px;
-            line-height: 1.5;
+        .btn-secondary {
+            background-color: #21262d;
+            color: #c9d1d9;
+            border: 1px solid #30363d;
         }
-
-        .skill-group {
-            font-size: 14px;
-            margin-bottom: 6px;
-            line-height: 1.5;
-        }
-
-        .skill-group strong {
-            color: var(--text-primary);
-        }
-
-        @media print {
-            body {
-                background: none;
-                padding: 0;
-            }
-            .action-bar {
-                display: none;
-            }
-            .cv-sheet {
-                border: none;
-                box-shadow: none;
-                padding: 0;
-            }
+        .btn-secondary:hover {
+            background-color: #30363d;
+            color: #f0f6fc;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="action-bar" aria-label="Document actions">
-            <div>
-                <strong style="color: var(--text-primary); font-size: 14px;">Curriculum Vitae</strong>
-                <span class="separator">|</span>
-                <span style="font-size: 13px; color: var(--text-muted);">Updated September 2026</span>
-            </div>
-            <div class="action-links">
-                <a href="./cv.pdf" class="btn btn-primary" download="CV_Rizky_Yanuar_Kristianto.pdf">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Download PDF
-                </a>
-                <button type="button" onclick="window.print()" class="btn btn-secondary">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-                    Print
-                </button>
-                <a href="https://github.com/rizkyyanuark/curriculum-vitae" target="_blank" rel="noopener" class="btn btn-secondary">
-                    GitHub
-                </a>
-            </div>
-        </nav>
-
-        <main class="cv-sheet">
-            <header class="cv-header">
-                <h1 class="candidate-name">Rizky Yanuar Kristianto</h1>
-                <p class="candidate-role">AI Data Engineer</p>
-                <div class="contact-info">
-                    <span>Surabaya, East Java, Indonesia</span>
-                    <span class="separator">|</span>
-                    <a href="tel:+6289676257683">+62 896-7625-7683</a>
-                    <span class="separator">|</span>
-                    <a href="mailto:rizkyyanuarkristianto@gmail.com">rizkyyanuarkristianto@gmail.com</a>
-                </div>
-                <div class="contact-info" style="margin-top: 4px;">
-                    <a href="https://www.linkedin.com/in/rizkyyanuark" target="_blank" rel="noopener">linkedin.com/in/rizkyyanuark</a>
-                    <span class="separator">|</span>
-                    <a href="https://github.com/rizkyyanuark" target="_blank" rel="noopener">github.com/rizkyyanuark</a>
-                </div>
-            </header>
-
-            <p class="summary-text">
-                Data Science student with hands-on experience in data engineering and applied machine learning. Experienced in building automated ETL pipelines with Apache Airflow and PySpark, working with vector databases for RAG workflows, and deploying containerized applications on AWS and GCP. Focused on building clean data pipelines that support reliable machine learning models.
-            </p>
-
-            <section class="cv-section" aria-labelledby="sec-education">
-                <h2 id="sec-education" class="section-title">Education</h2>
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">State University of Surabaya</span>
-                        <span class="entry-meta">Surabaya, East Java</span>
-                    </div>
-                    <div class="entry-header">
-                        <span class="entry-subtitle">Bachelor of Data Science</span>
-                        <span class="entry-meta">Aug 2022 – Jul 2026</span>
-                    </div>
-                    <p style="font-size: 14px; margin-top: 2px;"><strong>GPA:</strong> 3.59 / 4.00 (145 Credits completed)</p>
-                    <p style="font-size: 13px; color: var(--text-muted); margin-top: 2px;">
-                        <strong>Relevant Coursework:</strong> Data Science, Data Structures and Algorithms, Statistics, Data Modeling, Machine Learning, Computer Vision, Generative AI.
-                    </p>
-                </article>
-            </section>
-
-            <section class="cv-section" aria-labelledby="sec-experience">
-                <h2 id="sec-experience" class="section-title">Work Experience</h2>
-                
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">State University of Surabaya</span>
-                        <span class="entry-meta">Surabaya, East Java</span>
-                    </div>
-                    <div class="entry-header">
-                        <span class="entry-subtitle">Research Assistant</span>
-                        <span class="entry-meta">Jan 2026 – Present</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Co-authored a research paper currently under peer review in a Scopus Q1 journal, focusing on generative model architectures and knowledge graphs.</li>
-                        <li>Ran hyperparameter tuning and ablation experiments to evaluate architectural improvements against baseline models for an IEEE-format manuscript.</li>
-                        <li>Set up Docker environments on AWS GPU instances to run data extraction, ontology mapping, and embedding generation workflows.</li>
-                        <li>Tracked datasets and model checkpoints using Git and DVC to keep experimental results organized and reproducible.</li>
-                    </ul>
-                </article>
-
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">Kominfo Jatim</span>
-                        <span class="entry-meta">Surabaya, East Java</span>
-                    </div>
-                    <div class="entry-header">
-                        <span class="entry-subtitle">AI Engineer Intern</span>
-                        <span class="entry-meta">Jul 2025 – Dec 2025</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Built a RAG-based question-answering bot for the Majadigi portal using AWS Bedrock and Qdrant, helping citizens search regional regulations easily.</li>
-                        <li>Trained an NLP classification model for hoax news detection, helping the internal team review citizen incident reports more quickly.</li>
-                        <li>Set up GitLab CI/CD pipelines to run automated tests and deploy code to a Linux VPS, and documented REST APIs in Postman for the frontend team.</li>
-                        <li>Assisted in deploying the AI features to production on Majadigi, serving live citizen inquiries.</li>
-                    </ul>
-                </article>
-
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">PT PLN Icon Plus</span>
-                        <span class="entry-meta">Surabaya, East Java</span>
-                    </div>
-                    <div class="entry-header">
-                        <span class="entry-subtitle">Data Engineer Intern</span>
-                        <span class="entry-meta">Feb 2025 – Jun 2025</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Built automated ETL pipelines using Apache Airflow, PySpark, and Python to process 240,000+ daily ICONNET telecom records, reducing manual reporting time by 50%.</li>
-                        <li>Created a Slack alert notification linked to Airflow DAGs, enabling the team to detect and resolve pipeline errors quickly.</li>
-                        <li>Analyzed telecom signal quality data across providers and built interactive Looker Studio dashboards for weekly operational monitoring.</li>
-                        <li>Built a database question-answering tool using an LLM and SQL queries, helping 15+ staff look up network records without writing manual SQL.</li>
-                    </ul>
-                </article>
-
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">Bangkit Academy led by Google, GoTo, and Traveloka</span>
-                        <span class="entry-meta">Remote</span>
-                    </div>
-                    <div class="entry-header">
-                        <span class="entry-subtitle">Machine Learning Cohort</span>
-                        <span class="entry-meta">Aug 2024 – Dec 2024</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Led a 7-member capstone team (ML, Cloud, Mobile) to develop NV-Bite, a nutrition tracking mobile app, completing full project delivery 1 week ahead of deadline.</li>
-                        <li>Collected, cleaned, and labeled a dataset of 6,500+ food images for multi-class classification model training.</li>
-                        <li>Trained a Computer Vision classification model and deployed it using Flask on Google Cloud Platform (GCP) to serve predictions for the mobile app.</li>
-                        <li>Awarded Best Presenting Group out of 30+ capstone teams for technical delivery and clear project demonstration.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="cv-section" aria-labelledby="sec-projects">
-                <h2 id="sec-projects" class="section-title">Technical Projects</h2>
-
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">Hybrid Graph-RAG Academic Knowledge Base (Thesis)</span>
-                        <span class="entry-meta">Aug 2025 – Jul 2026</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Built a Hybrid Graph-RAG system combining Neo4j and Milvus to search and connect 10,000+ academic papers and author profiles using both semantic similarity and graph links.</li>
-                        <li>Wrote Apache Airflow DAGs to extract, clean, and load publication data from online academic sources into Neo4j and PostgreSQL.</li>
-                        <li>Co-authored a research methodology paper currently under peer review in a Scopus Q1 journal, documenting graph retrieval benchmarks and entity resolution methods.</li>
-                        <li>Structured data storage using PostgreSQL for metadata, Neo4j for graphs, Milvus for embeddings, and Redis for caching, keeping API response times under 1 second.</li>
-                    </ul>
-                </article>
-
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">End-to-End Sentiment Analysis Pipeline for KIP-K Scholarship Tweets</span>
-                        <span class="entry-meta">Jun 2024</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Built a Python script and text preprocessing pipeline to collect and clean 4,000+ raw tweets from X.</li>
-                        <li>Trained and evaluated a BiLSTM model using GloVe word embeddings to classify public sentiment into positive, neutral, and negative categories.</li>
-                        <li>Visualized sentiment patterns across 50+ universities in a Looker Studio dashboard to help analyze public feedback on scholarship policies.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="cv-section" aria-labelledby="sec-organization">
-                <h2 id="sec-organization" class="section-title">Organizational Experience</h2>
-                <article class="entry-item">
-                    <div class="entry-header">
-                        <span class="entry-title">Himpunan Mahasiswa Sains Data (UNESA)</span>
-                        <span class="entry-meta">Surabaya, East Java</span>
-                    </div>
-                    <div class="entry-header">
-                        <span class="entry-subtitle">Staff of Advocacy and Student Welfare Division</span>
-                        <span class="entry-meta">Jan 2024 – Jan 2025</span>
-                    </div>
-                    <ul class="bullet-list">
-                        <li>Planned and executed 10+ student events, including data science webinars, workshops, and competitions over a one-year tenure.</li>
-                        <li>Initiated the InSCAW career workshop series, coordinating with industry speakers and engaging 50+ student participants.</li>
-                        <li>Served as a liaison between students and faculty department heads to address academic concerns and welfare requests.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section class="cv-section" aria-labelledby="sec-skills">
-                <h2 id="sec-skills" class="section-title">Skills & Competencies</h2>
-                <div class="skill-group"><strong>Programming:</strong> Python, SQL, Bash</div>
-                <div class="skill-group"><strong>Data Engineering:</strong> Apache Airflow, PySpark, ETL Pipeline Design, Data Modeling, Kafka</div>
-                <div class="skill-group"><strong>Databases & Storage:</strong> PostgreSQL, BigQuery, Neo4j, Milvus, Redis, MinIO</div>
-                <div class="skill-group"><strong>AI & Machine Learning:</strong> LLMs, RAG / GraphRAG, Computer Vision, NLP, PyTorch, TensorFlow, MLflow</div>
-                <div class="skill-group"><strong>Cloud & DevOps:</strong> AWS, Google Cloud Platform (GCP), Docker, Linux, Git, CI/CD (GitLab CI, GitHub Actions)</div>
-                <div class="skill-group"><strong>Soft Skills:</strong> Problem Solving, Cross-Functional Collaboration, Technical Communication</div>
-            </section>
-
-            <section class="cv-section" aria-labelledby="sec-certifications">
-                <h2 id="sec-certifications" class="section-title">Certifications & Languages</h2>
-                <ul class="bullet-list">
-                    <li>DeepLearning.AI TensorFlow Developer & Generative AI Specializations</li>
-                    <li>Google Cloud Skills Boost: Machine Learning Specialization (JuaraGCP)</li>
-                    <li>AWS Certified CloudOps / Cloud Computing Training</li>
-                    <li>Dicoding: Data Analysis with Python</li>
-                    <li>EnglishScore / IELTS Equivalent (Band 7.0 – C1 Equivalent)</li>
-                </ul>
-                <p style="font-size: 14px; margin-top: 8px;">
-                    <strong>Languages:</strong> Indonesian (Native), English (Fluent, IELTS: 7.0), Javanese (Conversational)
-                </p>
-            </section>
-        </main>
+    <div class="card">
+        <div class="avatar-container">RK</div>
+        <h1>Rizky Yanuar Kristianto</h1>
+        <div class="subtitle">Data Science & AI Data Engineer</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+        <p class="status">Mengarahkan ke versi terbaru <strong>Curriculum Vitae (PDF)</strong>...</p>
+        <div class="actions">
+            <a href="./cv.pdf" class="btn btn-primary">Buka CV (PDF) Langsung</a>
+            <a href="https://github.com/rizkyyanuark/curriculum-vitae" class="btn btn-secondary" target="_blank" rel="noopener">Lihat GitHub Repository</a>
+        </div>
     </div>
 </body>
 </html>
