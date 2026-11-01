@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - Rizky Yanuar Kristianto</title>
+
+    <!-- Instant HTML meta redirect to cv.pdf -->
+    <meta http-equiv="refresh" content="0; url=./cv.pdf">
+
+    <!-- Open Graph & Social Media Preview Cards -->
+    <meta property="og:title" content="Rizky Yanuar Kristianto - Curriculum Vitae">
+    <meta property="og:description" content="Data Science & AI Data Engineer | Universitas Negeri Surabaya | View and Download Latest Resume (PDF)">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://rizkyyanuark.github.io/curriculum-vitae/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Rizky Yanuar Kristianto - Curriculum Vitae">
+    <meta name="twitter:description" content="Data Science & AI Data Engineer | Universitas Negeri Surabaya | View and Download Latest Resume (PDF)">
+
+    <!-- Instant JavaScript Redirect -->
+    <script>
+        window.location.replace("./cv.pdf");
+    </script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 36px 32px;
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+        }
+        .avatar-container {
+            width: 68px;
+            height: 68px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1f6feb, #238636);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            border: 3px solid #30363d;
+        }
+        h1 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #f0f6fc;
+            margin-bottom: 6px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #58a6ff;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .status {
+            font-size: 13px;
+            color: #8b949e;
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+        .loader-bar {
+            width: 100%;
+            height: 4px;
+            background-color: #21262d;
+            border-radius: 2px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+        .loader-progress {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #1f6feb, #2ea043);
+            animation: indeterminate 1.5s infinite linear;
+            transform-origin: 0% 50%;
+        }
+        @keyframes indeterminate {
+            0% { transform: translateX(0) scaleX(0); }
+            40% { transform: translateX(0) scaleX(0.5); }
+            100% { transform: translateX(100%) scaleX(0.5); }
+        }
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        .btn-primary {
+            background-color: #238636;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #2ea043;
+        }
+        .btn-secondary {
+            background-color: #21262d;
+            color: #c9d1d9;
+            border: 1px solid #30363d;
+        }
+        .btn-secondary:hover {
+            background-color: #30363d;
+            color: #f0f6fc;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="avatar-container">RK</div>
+        <h1>Rizky Yanuar Kristianto</h1>
+        <div class="subtitle">Data Science & AI Data Engineer</div>
+        <div class="loader-bar">
+            <div class="loader-progress"></div>
+        </div>
+        <p class="status">Mengarahkan ke versi terbaru <strong>Curriculum Vitae (PDF)</strong>...</p>
+        <div class="actions">
+            <a href="./cv.pdf" class="btn btn-primary">Buka CV (PDF) Langsung</a>
+            <a href="https://github.com/rizkyyanuark/curriculum-vitae" class="btn btn-secondary" target="_blank" rel="noopener">Lihat GitHub Repository</a>
+        </div>
+    </div>
+</body>
+</html>
